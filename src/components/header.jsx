@@ -26,14 +26,14 @@ const Header = () => {
           <Button onClick={() => navigate("/auth")}>Login</Button>
         ) : (
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="w-10 rounded-full overflow-hidden">
               <Avatar>
                 <AvatarImage src="http://github.com/shadcn.png" />
                 <AvatarFallback>PA</AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel>Ana Stone</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <Link to="/dashboard" className="flex">
