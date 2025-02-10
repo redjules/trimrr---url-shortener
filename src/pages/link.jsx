@@ -65,6 +65,8 @@ const LinkPage = () => {
     link = url?.custom_url ? url?.custom_url : url.short_url;
   }
 
+  const domain = typeof window !== "undefined" ? window.location.origin : "";
+
   return (
     <>
       {(loading || loadingStats) && (
@@ -76,11 +78,11 @@ const LinkPage = () => {
             {url?.title}
           </span>
           <a
-            href={`https://trimrr.ch/${link}`}
+            href={`${domain}/${link}`}
             target="_blank"
             className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            https://trimrr.ch/{link}
+            {domain}/{link}
           </a>
           <a
             href={url?.original_url}
@@ -96,9 +98,7 @@ const LinkPage = () => {
           <div className="flex gap-2">
             <Button
               variant="ghost"
-              onClick={() =>
-                navigator.clipboard.writeText(`https://trimrr.ch/${link}`)
-              }
+              onClick={() => navigator.clipboard.writeText(`${domain}/${link}`)}
             >
               <Copy />
             </Button>
