@@ -4,6 +4,9 @@ https://trimrr-url-shortener.vercel.app/
 
 # Photo
 
+<img width="955" alt="Screenshot 2025-02-10 at 14 45 13" src="https://github.com/user-attachments/assets/2e100e31-4186-44e4-b92d-d263663c2388" />
+
+
 ![Alt text](./1.png)
 
 # React + Vite
